@@ -11,6 +11,6 @@ function makePhrases(){
     var rand3=Math.floor(Math.random() * words3.length);
 
     var phrase= words1[rand1]+" "+words2[rand2]+" "+words3[rand3];
-    alert(phrase); //why alert here? what if return?
+    alert(phrase);
 }
 makePhrases();
