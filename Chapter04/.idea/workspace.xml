@@ -36,11 +36,9 @@
       <file leaf-file-name="bubble.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bubble.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.90686274" vertical-offset="0" max-vertical-offset="660">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="1.0" vertical-offset="438" max-vertical-offset="1155">
+              <caret line="70" column="51" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -302,11 +300,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bubble.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90686274" vertical-offset="0" max-vertical-offset="660">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="1.0" vertical-offset="438" max-vertical-offset="1155">
+          <caret line="70" column="51" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
