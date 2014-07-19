@@ -74,5 +74,5 @@ function getResults(scores, score) {
     }
     return solutions;
 }
-var bestSolutions = getResults(scores, highScore);
+var bestSolutions = getResults(scores, highScore); //this highScore is the result of printAndGetHighScore(scores);
 console.log("Solutions with the highest score: " + bestSolutions);
