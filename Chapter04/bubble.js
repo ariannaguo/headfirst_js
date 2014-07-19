@@ -34,7 +34,8 @@ console.log("Solutions with the highest score: " + bestSolutions);
 var bestSolutions = [];
 for (var i = 0; i < scores.length; i++) {
     if (scores[i] == highScore) {
-        bestSolutions[bestSolutions.length] = i; //why not bestSolutions[bestSolutions.length-1] = i
+        bestSolutions[bestSolutions.length] = i;
+        //why not bestSolutions[bestSolutions.length-1] = i？this means the last item in array, but new item in array should bebestSolutions[bestSolutions.length]...
     }
 }
 console.log("Solutions with the highest score: " + bestSolutions);
