@@ -66,6 +66,7 @@ var highScore = printAndGetHighScore(scores);
 
 console.log("Bubble tests: " + scores.length);
 console.log("Highest bubble score: " + highScore);
+
 function getResults(scores, score) {
     var solutions = [];
     for (var i = 0; i < scores.length; i++) {
