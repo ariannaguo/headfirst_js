@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Quiz3</title>
+</head>
+<body>
+<script>
+    //    function mean(array) {
+    //      for(i=0;i<array.length;i++) {
+    //          sum=array[i];
+    //          sum=sum+array[i+1];
+    //          average=sum/array.length;
+    //      }
+    //        return average;
+    //    }
+    var sum = 0;
+    function mean(array) {
+        for (i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+        }
+        var average = sum / array.length;
+        return average;
+    }
+    var mean1 = mean([1, 2, 3, 4, 5]);
+    var mean2 = mean([5, 6, 7]);
+    var mean3 = mean([-2, 3, 5]);
+
+    console.log(mean1);
+    console.log(mean2);
+    console.log(mean3);
+
+</script>
+</body>
+</html>
