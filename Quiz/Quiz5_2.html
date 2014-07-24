@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Quiz5_2</title>
+    <script>
+        var Arianna ={
+            name:"Arianna",
+            livingPlace: "Shanghai",
+            passion:"programming & Design",
+            goToWork:function(time){
+                if(time==9){
+                    console.log("In the morning, she goes to work at 9.")
+                }
+            },
+            goHome: function(weather){
+                if(weather="good"){
+                    console.log("When the weather is good, she goes home on foot.")
+                }else{
+                    console.log("when the weather is not so good, she goes home by bus.")
+                }
+            },
+            read: function(book, pages){
+                console.log("Today she read "+pages+" pages of the book "+book+".")
+            },
+            program:function(programName){
+                console.log("After reading, she wrote a program called "+programName+".")
+            }
+        }
+        console.log("There is a girl, whose name is "+Arianna.name+", she lives in "+Arianna.livingPlace+", she likes "+Arianna.passion+".");
+        Arianna.goToWork(9);
+        Arianna.goHome("good");
+        Arianna.read("Head First Javascript",50);
+        Arianna.program("describe.js");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
