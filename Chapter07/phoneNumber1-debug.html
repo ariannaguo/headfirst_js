@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PhoneNumber1-debug</title>
+    <script>
+        function validate(phoneNumber){
+            if(phoneNumber<7||phoneNumber>8){
+                return false;
+            }
+            var first = phoneNumber.substring(0,3);
+            var second = phoneNumber.substring(phoneNumber.length-4);
+            if (isNaN(first)||isNaN(second)||first<0||second<0){
+                return false;
+            }
+            if(phoneNumber.length===8){
+                return(phoneNumber.charAt(3)==="-");
+                }
+            return true;
+        }
+        var phoneNumber1=validate("1234-567");
+        var phoneNumber2=validate("12345");
+        var phoneNumber3=validate("123-4567");
+        var phoneNumber4=validate("123--456");
+
+        console.log(phoneNumber1);
+        console.log(phoneNumber2);
+        console.log(phoneNumber3);
+        console.log(phoneNumber4);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
