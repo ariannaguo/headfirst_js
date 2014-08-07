@@ -39,7 +39,7 @@ var model = {
     ],
 
     fire: function (guess) {
-        for (i = 0; i < this.numShips; i++) {
+        for (var i = 0; i < this.numShips; i++) {
             var ship = this.ships[i];
 //            var locations=ship.locations;
 //            var index=locations.indexOf(guess);
@@ -59,6 +59,7 @@ var model = {
         view.displayMessage("You missed.");
         return false;
     },
+
     isSunk: function (ship) {
         for (var i = 0; i < this.shipLength; i++) {
             if (ship.hits[i] !== "hit") {
@@ -67,42 +68,45 @@ var model = {
         }
         return true;
     },
-    generateShipLocations:function(){
+
+    generateShipLocations: function () {
         var locations;
-        for (var i=0;i<this.numShips;i++){
-            do{
-                locations=this.generateShip();
-            }while(this.collision(locations));
-            this.ship[i].locations=locations;
+        for (var i = 0; i < this.numShips; i++) {
+            do {
+                locations = this.generateShip();
+            } while (this.collision(locations));//here means collision return true??? or return false???
+            this.ships[i].locations = locations;//not understand, when carry on collision, which locations we pass in?
         }
     },
-    generateShip:function(){
-        var direction=Math.floor(Math.random()*2);
+
+    generateShip: function () {
+        var direction = Math.floor(Math.random() * 2);
         var row, col;
 
-        if(direction===1){
-            row=Math.floor(Math.random()*this.boardSize);
-            col=Math.floor(Math.random()*(this.boardSize-this.shipLength));
-        }else{
-            row=Math.floor(Math.random()*(this.boardSize-this.shipLength));
-            col=Math.floor(Math.random()*this.boardSize)
+        if (direction === 1) {
+            row = Math.floor(Math.random() * this.boardSize);
+            col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+        } else {
+            row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+            col = Math.floor(Math.random() * this.boardSize)
         }
 
-        var newShipLocations=[];
-        for(var i=0; i<this.shipLength;i++){
-            if (direction===1){
-                newShipLocations.push(row+""+(col+i));
-            }else{
-                newShipLocations.push((row+i)+""+col);
+        var newShipLocations = [];
+        for (var i = 0; i < this.shipLength; i++) {
+            if (direction === 1) {
+                newShipLocations.push(row + "" + (col + i));
+            } else {
+                newShipLocations.push((row + i) + "" + col);
             }
             return newShipLocations;
         }
     },
-    collision:function(locations){
-        for(var i=0; i<this.numShips;i++){
+
+    collision: function (locations) {
+        for (var i = 0; i < this.numShips; i++) {
             var ship = model.ships[i];
-            for (var j=0; j<locations.length;j++){
-                if(ship.locations.indexOf(locations[j])>=0){
+            for (var j = 0; j < locations.length; j++) {
+                if (ship.locations.indexOf(locations[j]) >= 0) {
                     return true;
                 }
             }
@@ -179,6 +183,25 @@ var controller = {
 //controller.processGuess("B1");
 //controller.processGuess("B2");
 
+function handleKeyPress(e) {
+    var fireButton = document.getElementById("fireButton");
+    if (e.keyCode === 13) {
+        fireButton.click();
+        return false;
+    }
+}
+
+function handleFireButton() {
+    var guessInput = document.getElementById("guessInput");
+    var guess = guessInput.value;
+    controller.processGuess(guess);
+
+    guessInput.value = ""; //clean input
+}
+
+
+window.onload = init;
+
 function init() {
     var fireButton = document.getElementById("fireButton");
     fireButton.onclick = handleFireButton;
@@ -186,22 +209,11 @@ function init() {
     var guessInput = document.getElementById("guessInput");
     guessInput.onkeypress = handleKeyPress;
 
-    function handleKeyPress(e) {
-        var fireButton = document.getElementById("fireButton");
-        if (e.keyCode === 13) {
-            fireButton.click();
-            return false;
-        }
-    }
-
-    function handleFireButton() {
-        var guessInput = document.getElementById("guessInput");
-        var guess = guessInput.value;
-        controller.processGuess(guess);
-
-        guessInput.value = ""; //clean input
-    }
     model.generateShipLocations();
+
 }
 
-window.onload = init;
+
+
+
+
