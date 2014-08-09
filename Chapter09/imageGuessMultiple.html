@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Image Guess Multiple</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        img {
+            margin: 20px;
+        }
+    </style>
+    <script>
+        window.onload = init;
+        function init() {
+            var images = document.getElementsByTagName("img");
+            for (var i = 0; i < images.length; i++) {
+                images[i].onclick = showAnswer;
+            }
+        }
+        function showAnswer(eventObj) {
+            var image = eventObj.target;
+            var name = image.id;
+            name = name + ".jpg";
+            image.src = name;
+        }
+    </script>
+</head>
+<body>
+<img id="zero" src="zeroblur.jpg">
+<img id="one" src="oneblur.jpg">
+<img id="two" src="twoblur.jpg">
+<img id="three" src="threeblur.jpg">
+<img id="four" src="fourblur.jpg">
+<img id="five" src="fiveblur.jpg">
+</body>
+</html>
