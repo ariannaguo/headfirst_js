@@ -5,9 +5,12 @@
     <title>Quiz6</title>
     <script>
         function luckyDraw(max, count) {
-            var RanNumbers = [];
-            var RanNumber;
+            
             if (count >= 1 && max >= count) {
+                
+                var RanNumbers = [];
+                var RanNumber;
+
                 for (var i = 0; i < count; i++) {
                     do {
                         RanNumber = Math.floor(Math.random() * max + 1);
@@ -22,10 +25,21 @@
         var luckyDraw1 = luckyDraw(8, 2);
         var luckyDraw2 = luckyDraw(10, 3);
         var luckyDraw3 = luckyDraw(10, -1);
+        
+        var luckyDraw4 = luckyDraw(5, 5);
+        var luckyDraw5 = luckyDraw(-1, 3);
+        var luckyDraw6 = luckyDraw("6", 3);
+        var luckyDraw7 = luckyDraw("a", 3);
+
 
         console.log(luckyDraw1);
         console.log(luckyDraw2);
         console.log(luckyDraw3);
+        
+        console.log(luckyDraw4);
+        console.log(luckyDraw5);
+        console.log(luckyDraw6);
+        console.log(luckyDraw7);
 
     </script>
 </head>
