@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Quiz6</title>
+    <script>
+        function luckyDraw(max, count) {
+            var RanNumbers = [];
+            var RanNumber;
+            if (count >= 1 && max >= count) {
+                for (var i = 0; i < count; i++) {
+                    do {
+                        RanNumber = Math.floor(Math.random() * max + 1);
+                    } while (RanNumbers.indexOf(RanNumber) >= 0);
+                    RanNumbers[i] = RanNumber;
+                }
+                return RanNumbers;
+            } else {
+                return[];
+            }
+        }
+        var luckyDraw1 = luckyDraw(8, 2);
+        var luckyDraw2 = luckyDraw(10, 3);
+        var luckyDraw3 = luckyDraw(10, -1);
+
+        console.log(luckyDraw1);
+        console.log(luckyDraw2);
+        console.log(luckyDraw3);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
