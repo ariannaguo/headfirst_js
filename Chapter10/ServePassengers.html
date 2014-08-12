@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Serve Passengers</title>
+    <script>
+        var passengers = [
+            {name: "Jane Doloop", paid: true,ticket:"coach"},
+            {name: "Dr.Evel", paid: false,ticket:"firstclass"},
+            {name:"Sue Property",paid:false,ticket:"premium"},
+            {name: "John Funcall", paid: true,ticket:"coach"}
+        ];
+        function createDrinkOrder(passenger){
+            var orderFunction;
+
+            if(passenger.ticket==="firstclass"){
+                orderFunction=function(){
+                    alert("Would you like a cocktail or wine?");
+                };
+            }else if(passenger.ticket==="premium"){
+                orderFunction=function(){
+                    alert("Would you like wine, cola or water?");
+                };
+            }
+            else{
+                orderFunction=function(){
+                    alert("Your choice is cola or water.")
+                };
+            }
+            return orderFunction;
+        }
+        function createDinnerOrder(passenger){
+            var orderFunction;
+
+            if(passenger.ticket==="firstclass"){
+                orderFunction=function(){
+                    alert("Would you like chicken or pasta?");
+                };
+            }else if(passenger.ticket==="premium"){
+                orderFunction=function(){
+                    alert("Would you like a snack box or cheese plate?");
+                };
+            }
+            else{
+                orderFunction=function(){
+                    alert("Would you like peanuts or pretzels?")
+                };
+            }
+            return orderFunction;
+        }
+        function serveCustomer(passenger){
+            var getDrinkOrderFunction=createDrinkOrder(passenger);
+            var getDinnerOrderFunction=createDinnerOrder(passenger);
+            getDrinkOrderFunction();
+            //get dinner order
+            getDinnerOrderFunction();
+            
+            getDrinkOrderFunction();
+            getDrinkOrderFunction();
+            //show movie;
+            getDrinkOrderFunction();
+            //pick up trash
+        }
+
+        function ServePassengers(passengers){
+            for(var i=0;i<passengers.length;i++){
+                serveCustomer(passengers[i]);
+            }
+        }
+        ServePassengers(passengers);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
