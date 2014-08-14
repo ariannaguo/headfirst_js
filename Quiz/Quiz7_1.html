@@ -7,39 +7,39 @@
         function calculator(input) {
             for (var i = 0; i < input.length; i++) {
                 if (input[i] === "+" || input[i] === "-" || input[i] === "*" || input[i] === "/") {
-                    return i;
+                    var index=i;
                 }
 
             }
-            var Num2 = parseInt(input.substring(i + 1));
-            if (i === 1) {
-                var Num1 = parseInt(input[1]);
-                if (input[i] === "+") {
+            var Num2 = parseInt(input.substring(index + 1));
+            if (index ===1) {
+                var Num1 = parseInt(input[0]);
+                if (input[index] === "+") {
                     return Num1 + Num2;
                 }
-                if (input[i] === "-") {
+                if (input[index] === "-") {
                     return Num1 - Num2;
                 }
-                if (input[i] === "*") {
+                if (input[index] === "*") {
                     return Num1 * Num2;
                 }
-                if (input[i] === "/") {
+                if (input[index] === "/") {
                     return Num1 / Num2;
                 }
             }
-            if (i > 1) {
-                var Num1 = parseInt(input.substring(0, i));
+            if (index > 1) {
+                var Num1 = parseInt(input.substring(0, index));
 
-                if (input[i] === "+") {
+                if (input[index] === "+") {
                     return Num1 + Num2;
                 }
-                if (input[i] === "-") {
+                if (input[index] === "-") {
                     return Num1 - Num2;
                 }
-                if (input[i] === "*") {
+                if (input[index] === "*") {
                     return Num1 * Num2;
                 }
-                if (input[i] === "/") {
+                if (input[index] === "/") {
                     return Num1 / Num2;
                 }
             }
