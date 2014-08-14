@@ -18,7 +18,11 @@
                 }
             }
 
-            var Num1 = parseInt(input.substring(0,index));
+            if (index < 1) {
+                return NaN;
+            }
+
+            var Num1 = parseInt(input.substring(0, index));
             var Num2 = parseInt(input.substring(index + 1));
             
             if (input[index] === "+") {
@@ -44,6 +48,7 @@
         var calculator7 = calculator("-2");
         var calculator8 = calculator("/3");
         var calculator9 = calculator("+123");
+        var calculator10 = calculator("abc");
 
         console.log(calculator1);
         console.log(calculator2);
@@ -54,6 +59,7 @@
         console.log(calculator7);
         console.log(calculator8);
         console.log(calculator9);
+        console.log(calculator10);
 
     </script>
 </head>
