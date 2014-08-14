@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<div>-->
+    <!--<form>-->
+        <!--<input type="text" id="input">-->
+    <!--</form>-->
+<!--</div>-->
+<script>
+    function calculate(input){
+        var Num1=parseInt(input.charAt(0));
+        var Num2=parseInt(input.charAt(2));
+        var operator=input.charAt(1);
+        if(operator==="+"){
+            return Num1+Num2;
+        }
+        if(operator==="-"){
+            return Num1-Num2;
+        }
+        if(operator==="*"){
+            return Num1*Num2;
+        }
+        if(operator==="/"){
+           return Num1/Num2;
+        }
+
+    }
+var cal1=calculate("1+2");
+
+    console.log(cal1);
+    
+</script>
+</body>
+</html>
