@@ -5,15 +5,17 @@
     <title>Quiz7_1</title>
     <script>
         function calculator(input) {
+            var index=-1;
             for (var i = 0; i < input.length; i++) {
                 if (input[i] === "+" || input[i] === "-" || input[i] === "*" || input[i] === "/") {
-                    var index=i;
+                    index=i;
+                    break;
                 }
 
             }
+
+            var Num1 = parseInt(input.substring(0,index));
             var Num2 = parseInt(input.substring(index + 1));
-            if (index ===1) {
-                var Num1 = parseInt(input[0]);
                 if (input[index] === "+") {
                     return Num1 + Num2;
                 }
@@ -27,35 +29,20 @@
                     return Num1 / Num2;
                 }
             }
-            if (index > 1) {
-                var Num1 = parseInt(input.substring(0, index));
-
-                if (input[index] === "+") {
-                    return Num1 + Num2;
-                }
-                if (input[index] === "-") {
-                    return Num1 - Num2;
-                }
-                if (input[index] === "*") {
-                    return Num1 * Num2;
-                }
-                if (input[index] === "/") {
-                    return Num1 / Num2;
-                }
-            }
-        }
 
         var calculator1 = calculator("1+2");
         var calculator2 = calculator("13+42");
         var calculator3 = calculator("1-2");
         var calculator4 = calculator("15*2");
         var calculator5 = calculator("0/2");
+        var calculator6 = calculator("02");
 
         console.log(calculator1);
         console.log(calculator2);
         console.log(calculator3);
         console.log(calculator4);
         console.log(calculator5);
+        console.log(calculator6);
 
     </script>
 </head>
