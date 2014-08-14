@@ -5,39 +5,35 @@
     <title>Quiz7_1</title>
     <script>
         function calculator(input) {
-            if(!isNaN(input)){
-                return input;
+            
+            if(!isNaN(input)) {
+                return parseFloat(input);
             }
+
             var index=-1;
             for (var i = 0; i < input.length; i++) {
                 if (input[i] === "+" || input[i] === "-" || input[i] === "*" || input[i] === "/") {
                     index=i;
                     break;
                 }
-
             }
 
             var Num1 = parseInt(input.substring(0,index));
             var Num2 = parseInt(input.substring(index + 1));
-                if (input[index] === "+") {
-                    return Num1 + Num2;
-                }
-                if (input[index] === "-") {
-                    return Num1 - Num2;
-                }
-                if (input[index] === "*") {
-                    return Num1 * Num2;
-                }
-                if (input[index] === "/") {
-                    return Num1 / Num2;
-                }
-//            if(isNaN(input)){
-//                return NaN;
-//            }
-//            if(!isNaN(input)){
-//                return input;
-//            }
+            
+            if (input[index] === "+") {
+                return Num1 + Num2;
             }
+            if (input[index] === "-") {
+                return Num1 - Num2;
+            }
+            if (input[index] === "*") {
+                return Num1 * Num2;
+            }
+            if (input[index] === "/") {
+                return Num1 / Num2;
+            }
+        }
 
         var calculator1 = calculator("1+2");
         var calculator2 = calculator("13+42");
@@ -47,6 +43,7 @@
         var calculator6 = calculator("02");
         var calculator7 = calculator("-2");
         var calculator8 = calculator("/3");
+        var calculator9 = calculator("+123");
 
         console.log(calculator1);
         console.log(calculator2);
@@ -56,6 +53,7 @@
         console.log(calculator6);
         console.log(calculator7);
         console.log(calculator8);
+        console.log(calculator9);
 
     </script>
 </head>
