@@ -5,15 +5,15 @@
     <title>Quiz7_1</title>
     <script>
         function calculator(input) {
-            
-            if(!isNaN(input)) {
+
+            if (!isNaN(input)) {
                 return parseFloat(input);
             }
 
-            var index=-1;
+            var index = -1;
             for (var i = 0; i < input.length; i++) {
                 if (input[i] === "+" || input[i] === "-" || input[i] === "*" || input[i] === "/") {
-                    index=i;
+                    index = i;
                     break;
                 }
             }
@@ -24,7 +24,7 @@
 
             var Num1 = parseInt(input.substring(0, index));
             var Num2 = parseInt(input.substring(index + 1));
-            
+
             if (input[index] === "+") {
                 return Num1 + Num2;
             }
@@ -49,6 +49,7 @@
         var calculator8 = calculator("/3");
         var calculator9 = calculator("+123");
         var calculator10 = calculator("abc");
+        var calculator11 = calculator("1+2+3");
 
         console.log(calculator1);
         console.log(calculator2);
@@ -60,6 +61,7 @@
         console.log(calculator8);
         console.log(calculator9);
         console.log(calculator10);
+        console.log(calculator11);
 
     </script>
 </head>

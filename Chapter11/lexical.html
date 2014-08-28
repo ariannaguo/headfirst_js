@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        //        function f1() {
+        //            var x = 1;
+        //
+        //            var f2 = function (y) {
+        //                return x + y;
+        //            };
+        //
+        //            return f2;
+        //        }
+        //
+        //        var f = f1();
+        //        console.log(f(2));
+
+        function add(x) {
+
+
+            var f = function (y) {
+                return x + y;
+            };
+
+            return f;
+        }
+
+        var add1 = add(1);
+        var add10 = add(10);
+
+        console.log(add1(5));
+        console.log(add10(5));
+
+        console.log(add1.toString());
+    </script>
+</head>
+<body>
+
+</body>
+</html>
